@@ -1,10 +1,18 @@
-# Manim Community Edition Docs
+# Manim Community Edition docs
+
+## Viewing the docs
+
+[View them here](https://philipenchin.github.io/manimce-docs/), or see the [build branch](https://github.com/PhilipEnchin/manimce-docs/tree/build) of this repo to grab a copy for local viewing.
+
+## Background
+
+The docs for [Manim Community Edition](https://github.com/ManimCommunity/manim/) are in development. But if you're like me, you'd like to have a look at them anyway. The plan is to keep them as up-to-date as possible while development continues. You can view the latest version I've built, or build them yourself. I've done my best to make both of those tasks super-easy.
 
 ## Building the docs
 
 ### *Properly* cloning this repo
 
-Because this repo uses a submodule in order to include the Manim Community Edition repo, cloning is every-so-slightly more complicated than usual:
+Because this repo uses a submodule in order to include the Manim Community Edition repo, cloning is ever-so-slightly more complicated than usual:
 
 ```sh
 git clone --recurse-submodules https://github.com/PhilipEnchin/manimce-docs.git
