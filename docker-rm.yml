@@ -1,0 +1,11 @@
+version: "3"
+services:
+  rm-docs:
+    build: .
+    entrypoint:
+      - rm
+      - doctrees
+      - html
+      - -r
+    volumes:
+      - .:/docs
