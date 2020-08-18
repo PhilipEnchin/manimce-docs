@@ -4,8 +4,7 @@ services:
     build: .
     entrypoint:
       - rm
-      - doctrees
-      - html
+      - docs
       - -r
     volumes:
       - .:/docs

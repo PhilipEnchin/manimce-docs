@@ -8,4 +8,4 @@ services:
       - html
     volumes:
       - ./manim/docs:/docs
-      - .:/build
+      - ./docs:/build/html
