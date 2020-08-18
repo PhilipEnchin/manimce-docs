@@ -32,14 +32,6 @@ docker-compose up
 
 To read your newly-built documentation, open `docs/index.html`.
 
-### A minor hiccup
-
-It's possible that you'll have a bit of difficulty deleting the `docs/` directory. To reduce headaches, you can remove it with this command:
-
-```sh
-docker-compose -f docker-rm.yml up
-```
-
 ### Update the docs
 
 Pull updates from the Manim Community Edition repo, and build it again:
