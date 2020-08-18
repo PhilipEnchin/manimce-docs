@@ -1,0 +1,11 @@
+version: "3"
+services:
+  manimce-docs:
+    build: .
+    entrypoint:
+      - make
+      - BUILDDIR=/build
+      - html
+    volumes:
+      - ./manim/docs:/docs
+      - .:/build
