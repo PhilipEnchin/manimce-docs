@@ -1,0 +1,297 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>A deeper look &mdash; manim  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Configuration" href="configuration.html" />
+    <link rel="prev" title="Quickstart" href="quickstart.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> manim
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../tutorials.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">A deeper look</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">A deeper look</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html">Configuration</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">manim</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../tutorials.html">Tutorials</a> &raquo;</li>
+        
+      <li>A deeper look</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/tutorials/a_deeper_look.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="a-deeper-look">
+<h1>A deeper look<a class="headerlink" href="#a-deeper-look" title="Permalink to this headline">¶</a></h1>
+<p>[NOTE:] this is some text I wrote that was originally meant to be part of the
+quickstart.  However, after some thought I’ve decided that it’s probably a bit
+too much for the quickstart, as the quickstart document is supposed to showcase
+the quickest way of getting up and running with manim.  I’ve moved it here for
+now, but feel free to edit/delete/move this text elsewhere in the
+documentation.</p>
+<div class="section" id="id1">
+<h2>A deeper look<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Let’s dissect what just happened step by step.  First, the following command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ manim scene.py SquareToCircle -pl
+</pre></div>
+</div>
+<p>executes <code class="docutils literal notranslate"><span class="pre">manim</span></code> on the file <code class="docutils literal notranslate"><span class="pre">scene.py</span></code>, which contains our animation code.
+Further, this command tells manim exactly which <code class="docutils literal notranslate"><span class="pre">Scene</span></code> to be rendered, in this
+case it is <code class="docutils literal notranslate"><span class="pre">SquareToCircle</span></code>.  A single scene file may contain more than one
+scene.  Next, the flag <code class="docutils literal notranslate"><span class="pre">-p</span></code> tells manim to play the scene once it’s rendered,
+and the <code class="docutils literal notranslate"><span class="pre">-l</span></code> flag tells manim to render the scene in low quality.</p>
+<p>After the video is rendered, you will see that manim has generated some new
+files and the project folder will look as follows.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>project/
+├─scene.py
+└─media
+  ├─videos
+  |  └─scene
+  |     └─480p15
+  |        ├─SquareToCircle.mp4
+  |        └─partial_movie_files
+  ├─text
+  └─Tex
+</pre></div>
+</div>
+<p>There are quite a few new files.  The main output is in
+<code class="docutils literal notranslate"><span class="pre">media/videos/scene/480p15/SquareToCircle.mp4</span></code>.  By default, the <code class="docutils literal notranslate"><span class="pre">media</span></code> folder
+will contain all of manim’s output files.  The <code class="docutils literal notranslate"><span class="pre">media/videos</span></code> subfolder
+contains the rendered videos.  Inside of it, you will find one folder for each
+different video quality.  In our case, since we used the <code class="docutils literal notranslate"><span class="pre">-l</span></code> flag, the video
+was generated at 480p at 15 frames per second from the <code class="docutils literal notranslate"><span class="pre">scene.py</span></code> file.
+Therefore, the output can be found inside <code class="docutils literal notranslate"><span class="pre">media/videos/scene/480p15</span></code>.  The
+additional folders <code class="docutils literal notranslate"><span class="pre">media/videos/scene/480p15/partial_movie_files</span></code> as well as
+<code class="docutils literal notranslate"><span class="pre">media/text</span></code> and <code class="docutils literal notranslate"><span class="pre">media/Tex</span></code> contain files that are used by manim internally.</p>
+<p>You can see how manim makes use of the generated folder structure by executing
+the following command,</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ manim scene.py SquareToCircle -pk
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">-l</span></code> flag (for low quality) has been replaced by the <code class="docutils literal notranslate"><span class="pre">-k</span></code> flag, for 4K
+quality.  Manim will take considerably longer to render this file, and it will
+play it once it’s done since we are using the <code class="docutils literal notranslate"><span class="pre">-p</span></code> flag.  The output should
+look like this:
+[NOTE:] Output currently removed, because on a normal non 4k screen the scene is to big to be displayed.</p>
+<p>And the folder structure should look as follows.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>project/
+├─scene.py
+└─media
+  ├─videos
+  | └─scene
+  |   ├─480p15
+  |   | ├─SquareToCircle.mp4
+  |   | └─partial_movie_files
+  |   └─2160p60
+  |     ├─SquareToCircle.mp4
+  |     └─partial_movie_files
+  ├─text
+  └─Tex
+</pre></div>
+</div>
+<p>Manim has created a new folder <code class="docutils literal notranslate"><span class="pre">media/videos/2160p60</span></code>, which corresponds to the
+resolution and the 60 frames per second corresponding to 4k quality.  Inside of
+it, you can find the new <code class="docutils literal notranslate"><span class="pre">SquareToCircle.mp4</span></code>, as well as the corresponding
+<code class="docutils literal notranslate"><span class="pre">partial_movie_files</span></code>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="configuration.html" class="btn btn-neutral float-right" title="Configuration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="quickstart.html" class="btn btn-neutral float-left" title="Quickstart" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, The Manim Community Dev Team
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

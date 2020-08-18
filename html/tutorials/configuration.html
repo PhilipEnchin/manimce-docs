@@ -1,0 +1,472 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Configuration &mdash; manim  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="A deeper look" href="a_deeper_look.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> manim
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../tutorials.html">Tutorials</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html">Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="a_deeper_look.html">A deeper look</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#command-line-arguments">Command Line Arguments</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-config-files">The config files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-user-config-file">The user config file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cascading-config-files">Cascading config files</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">manim</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../tutorials.html">Tutorials</a> &raquo;</li>
+        
+      <li>Configuration</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/tutorials/configuration.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="configuration">
+<h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h1>
+<p>Manim provides an extensive configuration system that allows it to adapt to
+many different use cases.  The easiest way to do this is through the use of
+command line (or <em>CLI</em>) arguments.</p>
+<div class="section" id="command-line-arguments">
+<h2>Command Line Arguments<a class="headerlink" href="#command-line-arguments" title="Permalink to this headline">¶</a></h2>
+<p>Usually, manim is ran from the command line by executing</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ manim &lt;file.py&gt; SceneName
+</pre></div>
+</div>
+<p>This asks manim to search for a Scene class called <code class="code docutils literal notranslate"><span class="pre">SceneName</span></code> inside the
+file &lt;file.py&gt; and render it.  One can also specify the render quality by using
+the flags <code class="code docutils literal notranslate"><span class="pre">-l</span></code>, <code class="code docutils literal notranslate"><span class="pre">-m</span></code>, <code class="code docutils literal notranslate"><span class="pre">-e</span></code>, or <code class="code docutils literal notranslate"><span class="pre">-k</span></code>, for low, medium,
+high, and 4k quality, respectively.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ manim &lt;file.py&gt; SceneName -l
+</pre></div>
+</div>
+<p>Another frequent flag is <code class="code docutils literal notranslate"><span class="pre">-p</span></code>, which makes manim show the rendered video
+right after it’s done rendering.</p>
+<p>There are in fact many more command line flags that manim accepts.  All the
+possible flags are shown by the following command.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ manim -h
+</pre></div>
+</div>
+<p>The output looks as follows.</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>usage: manim [-h] [-o OUTPUT_FILE] [-p] [-f] [--sound] [--leave_progress_bars]
+             [-a] [-w] [-s] [-g] [-i] [--disable_caching] [--flush_cache]
+             [--log_to_file] [-c BACKGROUND_COLOR]
+             [--background_opacity BACKGROUND_OPACITY] [--media_dir MEDIA_DIR]
+             [--log_dir LOG_DIR] [--tex_template TEX_TEMPLATE] [--dry_run]
+             [-t] [-l] [-m] [-e] [-k] [-r RESOLUTION]
+             [-n FROM_ANIMATION_NUMBER] [--config_file CONFIG_FILE]
+             [-v {DEBUG,INFO,WARNING,ERROR,CRITICAL}]
+             [--progress_bar True/False]
+             {cfg} ... file [scene_names [scene_names ...]]
+
+Animation engine for explanatory math videos
+
+positional arguments:
+  {cfg}
+  file                  path to file holding the python code for the scene
+  scene_names           Name of the Scene class you want to see
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -o OUTPUT_FILE, --output_file OUTPUT_FILE
+                        Specify the name of the output file, if it should be
+                        different from the scene class name
+  -p, --preview         Automatically open the saved file once its done
+  -f, --show_in_file_browser
+                        Show the output file in the File Browser
+  --sound               Play a success/failure sound
+  --leave_progress_bars
+                        Leave progress bars displayed in terminal
+  -a, --write_all       Write all the scenes from a file
+  -w, --write_to_movie  Render the scene as a movie file (this is on by
+                        default)
+  -s, --save_last_frame
+                        Save the last frame only (no movie file is generated)
+  -g, --save_pngs       Save each frame as a png
+  -i, --save_as_gif     Save the video as gif
+  --disable_caching     Disable caching (will generate partial-movie-files
+                        anyway)
+  --flush_cache         Remove all cached partial-movie-files
+  --log_to_file         Log terminal output to file
+  -c BACKGROUND_COLOR, --background_color BACKGROUND_COLOR
+                        Specify background color
+  --background_opacity BACKGROUND_OPACITY
+                        Specify background opacity
+  --media_dir MEDIA_DIR
+                        Directory to store media (including video files)
+  --log_dir LOG_DIR     Directory to store log files
+  --tex_template TEX_TEMPLATE
+                        Specify a custom TeX template file
+  --dry_run             Do a dry run (render scenes but generate no output
+                        files)
+  -t, --transparent     Render a scene with an alpha channel
+  -l, --low_quality     Render at low quality
+  -m, --medium_quality  Render at medium quality
+  -e, --high_quality    Render at high quality
+  -k, --fourk_quality   Render at 4K quality
+  -r RESOLUTION, --resolution RESOLUTION
+                        Resolution, passed as &quot;height,width&quot;. Overrides the
+                        -l, -m, -e, and -k flags, if present
+  -n FROM_ANIMATION_NUMBER, --from_animation_number FROM_ANIMATION_NUMBER
+                        Start rendering at the specified animation index,
+                        instead of the first animation. If you pass in two
+                        comma separated values, e.g. &#39;3,6&#39;, it will end the
+                        rendering at the second value
+  --config_file CONFIG_FILE
+                        Specify the configuration file
+  -v {DEBUG,INFO,WARNING,ERROR,CRITICAL}, --verbosity {DEBUG,INFO,WARNING,ERROR,CRITICAL}
+                        Verbosity level. Also changes the ffmpeg log level
+                        unless the latter is specified in the config
+  --progress_bar True/False
+                        Display the progress bar
+
+Made with &lt;3 by the manim community devs
+</pre></div>
+</div>
+<p>For example, to render a scene in high quality, but only output the last frame
+of the scene instead of the whole video, you can execute</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ manim &lt;file.py&gt; SceneName -es
+</pre></div>
+</div>
+<p>The following example specifies the output file name (with the <code class="code docutils literal notranslate"><span class="pre">-o</span></code>
+flag), renders only the first ten animations (<code class="code docutils literal notranslate"><span class="pre">-n</span></code> flag) with a white
+background (<code class="code docutils literal notranslate"><span class="pre">-c</span></code> flag), and saves the animation as a .gif instead of as a
+.mp4 file (<code class="code docutils literal notranslate"><span class="pre">-i</span></code> flag).  It uses the default quality and does not try to
+open the file after it is rendered.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ manim &lt;file.py&gt; SceneName -o myscene -i -n <span class="m">0</span>,10 -c WHITE
+</pre></div>
+</div>
+</div>
+<div class="section" id="the-config-files">
+<h2>The config files<a class="headerlink" href="#the-config-files" title="Permalink to this headline">¶</a></h2>
+<p>As the last example shows, executing manim from the command line may involve
+using many flags at the same.  This may become a nuisance if you must execute
+the same file many times in a short time period, for example when making small
+incremental tweaks to your scene script.  For this purpose, manim can also be
+configured using a configuration file.</p>
+<p>To use a configuration file when rendering your scene, you must create a file
+with name <code class="code docutils literal notranslate"><span class="pre">manim.cfg</span></code> in the same directory as your scene code.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The config file <strong>must</strong> be named <code class="code docutils literal notranslate"><span class="pre">manim.cfg</span></code>. Currently,
+manim does not support config files with any other name.</p>
+</div>
+<p>The config file must start with a section header, usually <code class="code docutils literal notranslate"><span class="pre">[CLI]</span></code>.  The
+configuration options under this header have the same name as the CLI flags,
+and serve the same purpose.  Take for example the following config file.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">CLI</span><span class="p">]</span>
+<span class="n">output_file</span> <span class="o">=</span> <span class="n">myscene</span>
+<span class="n">save_as_gif</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">background_color</span> <span class="o">=</span> <span class="n">WHITE</span>
+</pre></div>
+</div>
+<p>Executing <code class="code docutils literal notranslate"><span class="pre">manim</span> <span class="pre">&lt;file.py&gt;</span> <span class="pre">SceneName</span></code> on a directory that contains this
+config file is equivalent to executing</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ manim &lt;file.py&gt; SceneName -o myscene -i -c WHITE
+</pre></div>
+</div>
+<p>on a directory that does not contain a config file.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The names of the configuration options admissible in config files are
+exactly the same as the <strong>long names</strong> of the corresponding command
+line flags.  For example, the <code class="code docutils literal notranslate"><span class="pre">-c</span></code> and
+<code class="code docutils literal notranslate"><span class="pre">--background_color</span></code> flags are interchangeable, but the config
+file only accepts <code class="code docutils literal notranslate"><span class="pre">background_color</span></code> as an admissible option.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Configuration options that do not have command line analogues will be
+ignored.  For a list of all the command line flags, see <a class="reference internal" href="#command-line-arguments">Command Line
+Arguments</a>.</p>
+</div>
+<p>Manim will look for a <code class="code docutils literal notranslate"><span class="pre">manim.cfg</span></code> config file in the same directory as
+the file being rendered, and <strong>not</strong> in the directory of execution.  For
+example,</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ manim &lt;file.py&gt; path/to/SceneName -o myscene -i -c WHITE
+</pre></div>
+</div>
+<p>will use the config file found in <code class="code docutils literal notranslate"><span class="pre">path/to/SceneName</span></code>, if any.  It will
+<strong>not</strong> use the config file found in the current working directory, even if it
+exists.  In this way, the user may keep different config files for different
+scenes or projects, and execute them with the right configuration from anywhere
+in the system.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Config files will ignore any line that starts with a pound symbol
+<code class="code docutils literal notranslate"><span class="pre">#</span></code>.</p>
+</div>
+</div>
+<div class="section" id="the-user-config-file">
+<h2>The user config file<a class="headerlink" href="#the-user-config-file" title="Permalink to this headline">¶</a></h2>
+<p>As explained in the previous section, a <code class="code docutils literal notranslate"><span class="pre">manim.cfg</span></code> config file only
+affects the scene scripts in its same directory.  However, the user may also
+create a special config file that will apply to all scenes rendered by that
+user. This is referred to as the <strong>user-wide</strong> config file, and it will apply
+regardless of where manim is executed from, and regardless of where the scene
+script is stored.</p>
+<p>The user-wide config file lives in a special folder, depending on the operating
+system.</p>
+<ul class="simple">
+<li><p>Windows: <code class="code docutils literal notranslate"><span class="pre">UserDirectory</span></code>/AppData/Roaming/Manim/manim.cfg</p></li>
+<li><p>MacOS: <code class="code docutils literal notranslate"><span class="pre">UserDirectory</span></code>/config/manim/manim.cfg</p></li>
+<li><p>Linux: <code class="code docutils literal notranslate"><span class="pre">UserDirectory</span></code>/config/manim/manim.cfg</p></li>
+</ul>
+<p>Here, <code class="code docutils literal notranslate"><span class="pre">UserDirectory</span></code> is the user’s home folder.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Config files that only apply to their own folder, explained in the
+previous section, are called <strong>folder-wide</strong> config files.  A user
+may have many folder-wide config files, one per folder, but only one
+<strong>user-wide</strong> config file.  Different users in the same computer may
+each have their own user-wide config file.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not store scene scripts in the same folder as the user-wide
+config file.  In this case, the behavior is undefined.</p>
+</div>
+<p>Whenever you use manim from anywhere in the system, manim will look for a
+user-wide config file and read its configuration.</p>
+</div>
+<div class="section" id="cascading-config-files">
+<h2>Cascading config files<a class="headerlink" href="#cascading-config-files" title="Permalink to this headline">¶</a></h2>
+<p>What happens if you execute manim and it finds both a folder-wide config file
+and a user-wide config file?  Manim will read both files, but if they are
+incompatible, <strong>the folder-wide file takes precedence</strong>.</p>
+<p>For example, take the following user-wide config file</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># user-wide</span>
+<span class="p">[</span><span class="n">CLI</span><span class="p">]</span>
+<span class="n">output_file</span> <span class="o">=</span> <span class="n">myscene</span>
+<span class="n">save_as_gif</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="n">background_color</span> <span class="o">=</span> <span class="n">WHITE</span>
+</pre></div>
+</div>
+<p>and the following folder-wide file</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># folder-wide</span>
+<span class="p">[</span><span class="n">CLI</span><span class="p">]</span>
+<span class="n">save_as_gif</span> <span class="o">=</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<p>Then, executing <code class="code docutils literal notranslate"><span class="pre">manim</span> <span class="pre">&lt;file.py&gt;</span> <span class="pre">SceneName</span></code> will be equivalent to not
+using any config files and executing</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>manim &lt;file.py&gt; SceneName -o myscene -c WHITE
+</pre></div>
+</div>
+<p>Any command line flags have precedence over any config file.  For example,
+using the previous two config files and executing <code class="code docutils literal notranslate"><span class="pre">manim</span> <span class="pre">&lt;file.py&gt;</span>
+<span class="pre">SceneName</span> <span class="pre">-c</span> <span class="pre">RED</span></code> is equivalent to not using any config files and executing</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>manim &lt;file.py&gt; SceneName -o myscene -c RED
+</pre></div>
+</div>
+<p>To summarize, the order of precedence for configuration options is: <em>user-wide
+config file &lt; folder-wide config file &lt; CLI flags</em>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There is also a <strong>library-wide</strong> config file that determines manim’s
+default behavior, and applies to every user of the library.  It has
+the least precedence, and <strong>the user should not try to modify it</strong>.
+Developers should receive explicit confirmation from the core
+developer team before modifying it.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="a_deeper_look.html" class="btn btn-neutral float-left" title="A deeper look" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, The Manim Community Dev Team
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
