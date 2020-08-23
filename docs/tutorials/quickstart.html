@@ -1,205 +1,140 @@
 
-
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8">
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="../_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="../_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="../_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../_static/css/bootstrap-theme.min.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Quickstart &mdash; manim  documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-
-  
-  
-  
-  
-
-  
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/language_data.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <title>Quickstart &#8212; manim  documentation</title>
+    <link rel="stylesheet" href="../_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="A deeper look" href="a_deeper_look.html" />
-    <link rel="prev" title="Tutorials" href="tutorials_index.html" /> 
-</head>
-
-<body class="wy-body-for-nav">
-
+    <link rel="prev" title="Tutorials" href="../tutorials.html" />
+  
    
-  <div class="wy-grid-for-nav">
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="a_deeper_look.html" title="A deeper look"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../tutorials.html" title="Tutorials"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">manim  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../tutorials.html" accesskey="U">Tutorials</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Quickstart</a></li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar"><a href="
+    ../index.html" class="text-logo">manim  documentation</a>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Table Of Contents</h2>
+  </div>
+  <div class="sidebar-toc">
     
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
-          
-
-          
-            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> manim
-          
-
-          
-          </a>
-
-          
-            
-            
-          
-
-          
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
-</div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
-              <p class="caption"><span class="caption-text">Documentation</span></p>
+    
+      <p class="caption"><span class="caption-text">Documentation</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../installation/installation_index.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../reference.html">Reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../examples/examples_index.html">Examples</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="tutorials_index.html">Tutorials</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Quickstart</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#installation">Installation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#start-a-new-project">Start a new project</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#your-first-scene">Your first Scene</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#some-bells-and-whistles">Some bells and whistles</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#you-re-done">You’re done!</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../tutorials.html">Tutorials</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Quickstart</a></li>
 <li class="toctree-l2"><a class="reference internal" href="a_deeper_look.html">A deeper look</a></li>
 <li class="toctree-l2"><a class="reference internal" href="configuration.html">Configuration</a></li>
 </ul>
 </li>
 </ul>
 
-            
-          
-        </div>
-        
-      </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">manim</a>
-        
-      </nav>
-
-
-      <div class="wy-nav-content">
-        
-        <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
-  <ul class="wy-breadcrumbs">
     
-      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-        
-          <li><a href="tutorials_index.html">Tutorials</a> &raquo;</li>
-        
-      <li>Quickstart</li>
-    
-    
-      <li class="wy-breadcrumbs-aside">
-        
-            
-            <a href="../_sources/tutorials/quickstart.md.txt" rel="nofollow"> View page source</a>
-          
-        
-      </li>
-    
-  </ul>
-
-  
-  <hr/>
+  </div>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="../search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="../index.html">Docs</a></li>
+              
+                <li><a href="../tutorials.html">Tutorials</a></li>
+              
+              <li>Quickstart</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
             
   <div class="section" id="quickstart">
 <h1>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline">¶</a></h1>
 <p>This document will lead you step by step through the necessary procedure to get
-<code class="docutils literal notranslate"><span class="pre">manim</span></code> up and running as soon as possible.</p>
-<div class="section" id="installation">
-<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
-<p>[INSTALLATION INSTRUCTIONS GO HERE]. Note: when this section is done, delete
-installation instructions from the GitHub repo README.</p>
-<ul class="simple">
-<li><p>mention pip install</p></li>
-<li><p>mention choco package</p></li>
-<li><p>mention things about Cairo and LaTeX</p></li>
-</ul>
-</div>
+started with manim for the first time as soon as possible.  This tutorial
+assumes you have already installed manim following the steps in
+<a class="reference internal" href="../installation.html"><span class="doc">Installation</span></a>.</p>
 <div class="section" id="start-a-new-project">
 <h2>Start a new project<a class="headerlink" href="#start-a-new-project" title="Permalink to this headline">¶</a></h2>
 <p>To start a new manim video project, all you need to do is choose a single
 folder where all of the files related to the video will reside.  For this
 example, this folder will be called <code class="docutils literal notranslate"><span class="pre">project</span></code>,</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">project</span><span class="o">/</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>project/
 </pre></div>
 </div>
 <p>Every file containing code that produces a video with manim will be stored
-here, as well as <code class="docutils literal notranslate"><span class="pre">manim</span></code>’s output files and configuration files.</p>
+here, as well as any output files that manim produces and configuration files
+that manim needs.</p>
 </div>
 <div class="section" id="your-first-scene">
 <h2>Your first Scene<a class="headerlink" href="#your-first-scene" title="Permalink to this headline">¶</a></h2>
-<p>To produce your first scene, create a new file in your project folder</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>project/
+<p>To produce your first scene, create a new file in your project folder called
+<code class="docutils literal notranslate"><span class="pre">scene.py</span></code>,</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>project/
 └─scene.py
 </pre></div>
 </div>
-<p>and copy the following code in it</p>
+<p>and copy the following code in it.</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">manim</span> <span class="kn">import</span> <span class="o">*</span>
 
 <span class="c1"># all code must be contained inside the construct</span>
@@ -216,15 +151,15 @@ the following command:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ manim scene.py SquareToCircle -pl
 </pre></div>
 </div>
-<p>After some output, <code class="docutils literal notranslate"><span class="pre">manim</span></code> should render the scene into a .mp4 file, and open
-that file with the default movie player application.  You should see a video
-playing the following animation.
-<img alt="first scene output" src="../_images/first_scene.gif" /></p>
+<p>After showing some output, manim should render the scene into a .mp4 file,
+and open that file with the default movie player application.  You should see a
+video playing the following animation.</p>
+<img alt="first scene output" class="align-center" src="../_images/first_scene.gif" />
 <p>If you see the video and it looks correct, congrats! You just wrote your first
-<code class="docutils literal notranslate"><span class="pre">manim</span></code> scene from scratch.  If you get an error message instead, or if do not
+manim scene from scratch.  If you get an error message instead, or if do not
 see a video, or if the video output does not look like this, it is likely that
-<code class="docutils literal notranslate"><span class="pre">manim</span></code> has not been installed correctly. Please refer to the Troubleshooting
-page for more information.</p>
+manim has not been installed correctly. Please refer to the
+<a class="reference internal" href="../installation/troubleshooting.html"><span class="doc">Troubleshooting</span></a> page for more information.</p>
 </div>
 <div class="section" id="some-bells-and-whistles">
 <h2>Some bells and whistles<a class="headerlink" href="#some-bells-and-whistles" title="Permalink to this headline">¶</a></h2>
@@ -251,75 +186,66 @@ page for more information.</p>
 </pre></div>
 </div>
 <p>The output should look as follows.</p>
-<p><img alt="second scene output" src="../_images/second_scene.gif" /></p>
-<p>This example shows one of the most basic features of <code class="docutils literal notranslate"><span class="pre">manim</span></code>: the ability to
-implement complicated and perhaps mathematically-intensive animations (such as
-cleanly interpolating between two geometric shapes) in very few lines of code.</p>
+<img alt="second scene output" class="align-center" src="../_images/second_scene.gif" />
+<p>This example shows one of the most basic features of manim: the ability to
+implement complicated and mathematically-intensive animations (such as cleanly
+interpolating between two geometric shapes) in very few lines of code.</p>
 </div>
 <div class="section" id="you-re-done">
 <h2>You’re done!<a class="headerlink" href="#you-re-done" title="Permalink to this headline">¶</a></h2>
 <p>With a working installation of manim, and the bare basics under your belt, it
-is now time to start creating awesome mathematical animations.  For a more
-extensive review of manim’s features, as well as its configuration and other
-settings, see the Tutorial page.  For a list of all available features, see the
-Reference page.</p>
+is now time to start creating awesome mathematical animations.  For a look
+under the hood at what manim is doing when rendering the <code class="docutils literal notranslate"><span class="pre">SquareToCircle</span></code>
+scene, see the next tutorial <a class="reference internal" href="a_deeper_look.html"><span class="doc">A deeper look</span></a>.  For an extensive review of
+manim’s features, as well as its configuration and other settings, see the
+other <a class="reference internal" href="../tutorials.html"><span class="doc">Tutorials</span></a>.  For a list of all available features, see the
+<a class="reference internal" href="../reference.html"><span class="doc">Reference</span></a> page.</p>
 </div>
 </div>
 
 
-           </div>
-           
           </div>
-          <footer>
-  
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="a_deeper_look.html" class="btn btn-neutral float-right" title="A deeper look" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
-      
-      
-        <a href="tutorials_index.html" class="btn btn-neutral float-left" title="Tutorials" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
-      
-    </div>
-  
-
-  <hr/>
-
-  <div role="contentinfo">
-    <p>
-        
-        &copy; Copyright 2020, The Manim Community Dev Team
-
-    </p>
-  </div>
+            
+  <div class="footer-relations">
     
-    
-    
-    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
-    
-    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
-
-</footer>
-
-        </div>
+      <div class="pull-left">
+        <a class="btn btn-default" href="../tutorials.html" title="previous chapter (use the left arrow)">Tutorials</a>
       </div>
-
-    </section>
-
-  </div>
-  
-
-  <script type="text/javascript">
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script>
-
-  
-  
     
-   
-
-</body>
+      <div class="pull-right">
+        <a class="btn btn-default" href="a_deeper_look.html" title="next chapter (use the right arrow)">A deeper look</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="a_deeper_look.html" title="A deeper look"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../tutorials.html" title="Tutorials"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">manim  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../tutorials.html" >Tutorials</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Quickstart</a></li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="../_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2020, The Manim Community Dev Team. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
 </html>

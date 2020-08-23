@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Licensed under the Apache 2.0 License -->
+  <link rel="stylesheet" type="text/css" href="../_static/fonts/open-sans/stylesheet.css" />
+  <!-- Licensed under the SIL Open Font License -->
+  <link rel="stylesheet" type="text/css" href="../_static/fonts/source-serif-pro/source-serif-pro.css" />
+  <link rel="stylesheet" type="text/css" href="../_static/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="../_static/css/bootstrap-theme.min.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <title>Mac &#8212; manim  documentation</title>
+    <link rel="stylesheet" href="../_static/guzzle.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Linux" href="linux.html" />
+    <link rel="prev" title="Windows" href="win.html" />
+  
+   
+
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="linux.html" title="Linux"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="win.html" title="Windows"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">manim  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../installation.html" accesskey="U">Installation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Mac</a></li> 
+      </ul>
+    </div>
+    <div class="container-wrapper">
+
+      <div id="mobile-toggle">
+        <a href="#"><span class="glyphicon glyphicon-align-justify" aria-hidden="true"></span></a>
+      </div>
+  <div id="left-column">
+    <div class="sphinxsidebar"><a href="
+    ../index.html" class="text-logo">manim  documentation</a>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <h2>Table Of Contents</h2>
+  </div>
+  <div class="sidebar-toc">
+    
+    
+      <p class="caption"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../installation.html">Installation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../installation.html#installing-dependencies">Installing dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#installing-manim">Installing Manim</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../reference.html">Reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
+</ul>
+
+    
+  </div>
+</div>
+<div class="sidebar-block">
+  <div class="sidebar-wrapper">
+    <div id="main-search">
+      <form class="form-inline" action="../search.html" method="GET" role="form">
+        <div class="input-group">
+          <input name="q" type="text" class="form-control" placeholder="Search...">
+        </div>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div>
+      
+    </div>
+  </div>
+        <div id="right-column">
+          
+          <div role="navigation" aria-label="breadcrumbs navigation">
+            <ol class="breadcrumb">
+              <li><a href="../index.html">Docs</a></li>
+              
+                <li><a href="../installation.html">Installation</a></li>
+              
+              <li>Mac</li>
+            </ol>
+          </div>
+          
+          <div class="document clearer body">
+            
+  <div class="section" id="mac">
+<h1>Mac<a class="headerlink" href="#mac" title="Permalink to this headline">¶</a></h1>
+<p>First, you need to install Homebrew.  Homebrew is a package manager similar to
+<code class="docutils literal notranslate"><span class="pre">apt</span></code> or <code class="docutils literal notranslate"><span class="pre">pacman</span></code> on linux that allows you to install packages easily.  If
+it is not installed, please install it with this command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ruby -e <span class="s2">&quot;</span><span class="k">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install<span class="k">)</span><span class="s2">&quot;</span> &lt; /dev/null <span class="m">2</span>&gt; /dev/null
+</pre></div>
+</div>
+<p>To install cairo:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew install cairo
+</pre></div>
+</div>
+<p>To install ffmpeg:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew install ffmpeg
+</pre></div>
+</div>
+<p>To install Sox (optional):</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew install sox
+</pre></div>
+</div>
+<p>To install LaTeX:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew cask install mactex
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Note that MacTeX will require at least 4.5GB of hard disk space.
+This is due to the fact that it installs every LaTeX addon package
+offered by <a class="reference external" href="https://ctan.org/">CTAN</a>.  Only a few of these
+packages are required by Manim.  If you would like a smaller LaTeX
+install which only contains the packages needed by Manim alone,
+consider installing BasicTeX with the instructions below. This
+will require only about 1.5GB of space.  If you have installed
+MacTeX and are comfortable with it, do not install BasicTeX.</p>
+</div>
+<p>(Alternative) To install BasicTeX:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew cask install basictex
+</pre></div>
+</div>
+<p>Ensure that the TeXLiveManager tool <code class="docutils literal notranslate"><span class="pre">tlmgr</span></code> works, by running <code class="docutils literal notranslate"><span class="pre">tlmgr</span>
+<span class="pre">--version</span></code> in the terminal.  Now run</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo tlmgr install standalone preview doublestroke relsize fundus-calligra <span class="se">\</span>
+wasysym physics dvisvgm.x86_64-darwin dvisvgm rsfs wasy cm-super
+</pre></div>
+</div>
+<div class="section" id="certifying-a-clean-install">
+<h2>Certifying a clean install<a class="headerlink" href="#certifying-a-clean-install" title="Permalink to this headline">¶</a></h2>
+<p>To check that all dependencies have been installed properly, you can execute
+the commands <code class="docutils literal notranslate"><span class="pre">ffmpeg</span> <span class="pre">-version</span></code> and <code class="docutils literal notranslate"><span class="pre">latex</span></code> (regardless of whether you
+installed MacTeX or BasicTeX).  If LaTeX is installed properly, you will be
+taken to a command-line program that captures your cursor. Press CTRL+C to
+exit.  To check that Sox is installed correctly, simply run <code class="docutils literal notranslate"><span class="pre">sox</span></code>.</p>
+<p>After making sure you have a clean install, you can go back to
+<a class="reference internal" href="../installation.html#installing-manim"><span class="std std-ref">Installing Manim</span></a>.</p>
+</div>
+</div>
+
+
+          </div>
+            
+  <div class="footer-relations">
+    
+      <div class="pull-left">
+        <a class="btn btn-default" href="win.html" title="previous chapter (use the left arrow)">Windows</a>
+      </div>
+    
+      <div class="pull-right">
+        <a class="btn btn-default" href="linux.html" title="next chapter (use the right arrow)">Linux</a>
+      </div>
+    </div>
+    <div class="clearer"></div>
+  
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="linux.html" title="Linux"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="win.html" title="Windows"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">manim  documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../installation.html" >Installation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Mac</a></li> 
+      </ul>
+    </div>
+<script type="text/javascript">
+  $("#mobile-toggle a").click(function () {
+    $("#left-column").toggle();
+  });
+</script>
+<script type="text/javascript" src="../_static/js/bootstrap.js"></script>
+  <div class="footer">
+    &copy; Copyright 2020, The Manim Community Dev Team. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+  </div>
+  </body>
+</html>
