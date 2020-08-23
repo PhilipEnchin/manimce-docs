@@ -3,9 +3,9 @@ services:
   manimce-docs:
     build: .
     entrypoint:
-      - make
-      - BUILDDIR=/build
-      - html
+      - bash
+      - /build.sh
     volumes:
+      - ./build.sh:/build.sh
       - ./manim/docs:/docs
       - ./docs:/build/html

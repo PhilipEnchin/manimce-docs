@@ -1,4 +1,4 @@
 [submodule "manim"]
 	path = manim
 	url = https://github.com/ManimCommunity/manim.git
-	branch = docs
+	branch = master
