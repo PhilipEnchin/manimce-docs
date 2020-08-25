@@ -1,5 +1,7 @@
 # Manim Community Edition docs
 
+Looking for the [3b1b Manim docs](https://github.com/PhilipEnchin/manim-docs)?
+
 ## Viewing the docs
 
 [View them here](https://philipenchin.github.io/manimce-docs/), or see the [build branch](https://github.com/PhilipEnchin/manimce-docs/tree/build) of this repo to grab a copy for local viewing.
