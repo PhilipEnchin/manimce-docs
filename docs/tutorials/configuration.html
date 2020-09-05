@@ -17,6 +17,7 @@
     <title>Configuration &#8212; manim  documentation</title>
     <link rel="stylesheet" href="../_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -24,6 +25,7 @@
     <script src="../_static/language_data.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Contributing" href="../contributing.html" />
     <link rel="prev" title="A deeper look" href="a_deeper_look.html" />
   
    
@@ -35,6 +37,9 @@
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../contributing.html" title="Contributing"
+             accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="a_deeper_look.html" title="A deeper look"
              accesskey="P">previous</a> |</li>
@@ -69,6 +74,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Configuration</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
 </ul>
 
     
@@ -137,7 +143,7 @@ possible flags are shown by the following command.</p>
              [--log_dir LOG_DIR] [--tex_template TEX_TEMPLATE] [--dry_run]
              [-t] [-l] [-m] [-e] [-k] [-r RESOLUTION]
              [-n FROM_ANIMATION_NUMBER] [--config_file CONFIG_FILE]
-             [-v {DEBUG,INFO,WARNING,ERROR,CRITICAL}]
+             [--custom_folders] [-v {DEBUG,INFO,WARNING,ERROR,CRITICAL}]
              [--progress_bar True/False]
              {cfg} ... file [scene_names [scene_names ...]]
 
@@ -196,6 +202,9 @@ optional arguments:
                         rendering at the second value
   --config_file CONFIG_FILE
                         Specify the configuration file
+  --custom_folders      Use the folders defined in the [custom_folders]
+                        section of the config file to define the output folder
+                        structure
   -v {DEBUG,INFO,WARNING,ERROR,CRITICAL}, --verbosity {DEBUG,INFO,WARNING,ERROR,CRITICAL}
                         Verbosity level. Also changes the ffmpeg log level
                         unless the latter is specified in the config
@@ -363,6 +372,9 @@ developer team before modifying it.</p>
         <a class="btn btn-default" href="a_deeper_look.html" title="previous chapter (use the left arrow)">A deeper look</a>
       </div>
     
+      <div class="pull-right">
+        <a class="btn btn-default" href="../contributing.html" title="next chapter (use the right arrow)">Contributing</a>
+      </div>
     </div>
     <div class="clearer"></div>
   
@@ -375,6 +387,9 @@ developer team before modifying it.</p>
         <li class="right" style="margin-right: 10px">
           <a href="../genindex.html" title="General Index"
              >index</a></li>
+        <li class="right" >
+          <a href="../contributing.html" title="Contributing"
+             >next</a> |</li>
         <li class="right" >
           <a href="a_deeper_look.html" title="A deeper look"
              >previous</a> |</li>

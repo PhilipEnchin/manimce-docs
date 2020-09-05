@@ -17,6 +17,7 @@
     <title>Changelog &#8212; manim  documentation</title>
     <link rel="stylesheet" href="_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
     <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
@@ -71,6 +72,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Contributing</a></li>
 </ul>
 
     
@@ -108,7 +110,109 @@
             
   <div class="section" id="changelog">
 <h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
-<p>the newest updates</p>
+<div class="section" id="manimce-v1-0-0-dev">
+<h2>manimce-v1.0.0-dev<a class="headerlink" href="#manimce-v1-0-0-dev" title="Permalink to this headline">¶</a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">Date</dt>
+<dd class="field-odd"><p>TBD</p>
+</dd>
+</dl>
+<p>This is the first release of manimce after forking from 3b1b/manim.  As such,
+developers have focused on cleaning up and refactoring the codebase while still
+maintaining backwards compatibility wherever possible.</p>
+<div class="section" id="new-features">
+<h3>New Features<a class="headerlink" href="#new-features" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="command-line">
+<h4>Command line<a class="headerlink" href="#command-line" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li><p>Add 4k rendering option with the <code class="code docutils literal notranslate"><span class="pre">-k</span></code> option</p></li>
+<li><p>High quality rendering has gotten its own short argument (<code class="code docutils literal notranslate"><span class="pre">-e</span></code>)</p></li>
+<li><p>Output of ‘manim –help’ has been improved</p></li>
+<li><p>Implement logging with the <code class="code docutils literal notranslate"><span class="pre">rich</span></code> library and a <code class="code docutils literal notranslate"><span class="pre">logger</span></code> object instead of plain ol` prints</p></li>
+<li><p>Added a flag <code class="code docutils literal notranslate"><span class="pre">--dry_run</span></code>, which doesn’t write any media</p></li>
+<li><p>Allow for running manim with <code class="code docutils literal notranslate"><span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">manim</span></code></p></li>
+<li><p>Refactored Tex Template management. You can now use custom templates with command line args using <code class="code docutils literal notranslate"><span class="pre">--tex_template</span></code>!</p></li>
+<li><p>Re-add <code class="code docutils literal notranslate"><span class="pre">--save_frames</span></code> flag, which will save each frame as a png</p></li>
+<li><p>Re-introduce manim feature that allows you to type manim code in <code class="code docutils literal notranslate"><span class="pre">stdin</span></code> if you pass a minus sign <code class="code docutils literal notranslate"><span class="pre">(-)</span></code> as filename</p></li>
+<li><p>Added the <code class="code docutils literal notranslate"><span class="pre">--custom_folders</span></code> flag which yields a simpler output folder structure</p></li>
+<li><p>Re-implement GIF export with the <code class="code docutils literal notranslate"><span class="pre">-i</span></code> flag (using this flag outputs ONLY a .gif file, and no .mp4 file)</p></li>
+<li><p>Added a <code class="code docutils literal notranslate"><span class="pre">--verbose</span></code> flag</p></li>
+<li><p>You can save the logs to a file by using <code class="code docutils literal notranslate"><span class="pre">--log_to_file</span></code></p></li>
+</ol>
+</div>
+<div class="section" id="config-system">
+<h4>Config system<a class="headerlink" href="#config-system" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li><p>Implement a <code class="code docutils literal notranslate"><span class="pre">manim.cfg</span></code> config file system, that consolidates the global configuration, the command line argument parsing, and some of the constants defined in <code class="code docutils literal notranslate"><span class="pre">constants.py</span></code></p></li>
+<li><p>Added utilities for manipulating Manim’s <code class="code docutils literal notranslate"><span class="pre">.cfg</span></code> files.</p></li>
+<li><p>Added a subcommand structure for easier use of utilities managing <code class="code docutils literal notranslate"><span class="pre">.cfg</span></code> files</p></li>
+</ol>
+</div>
+<div class="section" id="mobjects-scenes-and-animations">
+<h4>Mobjects, Scenes, and Animations<a class="headerlink" href="#mobjects-scenes-and-animations" title="Permalink to this headline">¶</a></h4>
+<ol class="arabic simple">
+<li><p>Add customizable left and right bracket for <code class="code docutils literal notranslate"><span class="pre">Matrix</span></code> mobject and <code class="code docutils literal notranslate"><span class="pre">set_row_colors</span></code> method for matrix mobject</p></li>
+<li><p>Add <code class="code docutils literal notranslate"><span class="pre">AddTeXLetterByLetter</span></code> animation</p></li>
+<li><dl class="simple">
+<dt>Enhanced GraphScene</dt><dd><ol class="arabic simple">
+<li><p>You can now add arrow tips to axes</p></li>
+<li><p>extend axes a bit at the start and/or end</p></li>
+<li><p>have invisible axes</p></li>
+<li><p>highlight the area between two curves</p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p>ThreeDScene now supports 3dillusion_camera_rotation</p></li>
+<li><p>Add <code class="code docutils literal notranslate"><span class="pre">z_index</span></code> for manipulating depth of Objects on scene.</p></li>
+<li><p>Add a <code class="code docutils literal notranslate"><span class="pre">VDict</span></code> class: a <code class="code docutils literal notranslate"><span class="pre">VDict</span></code> is to a <code class="code docutils literal notranslate"><span class="pre">VGroup</span></code> what a <code class="code docutils literal notranslate"><span class="pre">dict</span></code> is to a <code class="code docutils literal notranslate"><span class="pre">list</span></code></p></li>
+<li><p>Added Scene-caching feature. Now, if a partial movie file is unchanged in your code, it isn’t rendered again! [HIGHLY UNSTABLE We’re working on it ;)]</p></li>
+<li><p>Most <code class="code docutils literal notranslate"><span class="pre">get_</span></code> and <code class="code docutils literal notranslate"><span class="pre">set_</span></code> methods have been removed in favor of instance attributes and properties</p></li>
+<li><p>The <code class="code docutils literal notranslate"><span class="pre">Container</span></code> class has been made into an AbstractBaseClass, i.e. in cannot be instantiated.  Instead, use one of its children classes</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">TextMobject</span></code> and <code class="docutils literal notranslate"><span class="pre">TexMobject</span></code> objects have been deprecated, due to their confusing names, in favour of <code class="docutils literal notranslate"><span class="pre">Tex</span></code> and <code class="docutils literal notranslate"><span class="pre">MathTex</span></code>. You can still, however, continue to use <code class="docutils literal notranslate"><span class="pre">TextMobject</span></code> and <code class="docutils literal notranslate"><span class="pre">TexMobject</span></code>, albeit with Deprecation Warnings constantly reminding you to switch.</p></li>
+<li><p>Add a <code class="code docutils literal notranslate"><span class="pre">Variable</span></code> class for displaying text that continuously updates to reflect the value of a python variable.</p></li>
+</ol>
+</div>
+</div>
+<div class="section" id="documentation">
+<h3>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Added clearer installation instructions, tutorials, examples, and API reference [WIP]</p></li>
+</ol>
+</div>
+<div class="section" id="fixes">
+<h3>Fixes<a class="headerlink" href="#fixes" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Initialization of directories has been moved to <code class="code docutils literal notranslate"><span class="pre">config.py</span></code>, and a bunch of bugs associated to file structure generation have been fixed</p></li>
+<li><p>Nonfunctional file <code class="code docutils literal notranslate"><span class="pre">media_dir.txt</span></code> has been removed</p></li>
+<li><p>Nonfunctional <code class="code docutils literal notranslate"><span class="pre">if</span></code> statements in <code class="code docutils literal notranslate"><span class="pre">scene_file_writer.py</span></code> have been removed</p></li>
+<li><p>Fix a bug where trying to render the example scenes without specifying the scene would show all scene objects in the library</p></li>
+<li><p>Many <code class="code docutils literal notranslate"><span class="pre">Exceptions</span></code> have been replaced for more specific exception subclasses</p></li>
+<li><p>Fixed a couple of subtle bugs in <code class="code docutils literal notranslate"><span class="pre">ArcBetweenPoints</span></code></p></li>
+</ol>
+</div>
+<div class="section" id="of-interest-to-developers">
+<h3>Of interest to developers<a class="headerlink" href="#of-interest-to-developers" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Python code formatting is now enforced by using the <code class="code docutils literal notranslate"><span class="pre">black</span></code> tool</p></li>
+<li><p>PRs now require two approving code reviews from community devs before they can be merged</p></li>
+<li><p>Added tests to ensure stuff doesn’t break between commits (For developers) [Uses Github CI, and Pytest]</p></li>
+<li><p>Add contribution guidelines (for developers)</p></li>
+<li><p>Added autogenerated documentation with sphinx and autodoc/autosummary [WIP]</p></li>
+<li><p>Made manim internally use relative imports</p></li>
+<li><p>Since the introduction of the <code class="code docutils literal notranslate"><span class="pre">TexTemplate</span></code> class, the files <code class="code docutils literal notranslate"><span class="pre">tex_template.tex</span></code> and <code class="code docutils literal notranslate"><span class="pre">ctex_template.tex</span></code> have been removed</p></li>
+</ol>
+</div>
+<div class="section" id="other-changes">
+<h3>Other Changes<a class="headerlink" href="#other-changes" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><p>Cleanup 3b1b Specific Files</p></li>
+<li><p>Rename package from manimlib to manim</p></li>
+<li><p>Move all imports to <code class="code docutils literal notranslate"><span class="pre">__init__</span></code>, so <code class="code docutils literal notranslate"><span class="pre">from</span> <span class="pre">manim</span> <span class="pre">import</span> <span class="pre">*</span></code> replaces <code class="code docutils literal notranslate"><span class="pre">from</span> <span class="pre">manimlib.imports</span> <span class="pre">import</span> <span class="pre">*</span></code></p></li>
+<li><p>Global dir variable handling has been removed. Instead <code class="code docutils literal notranslate"><span class="pre">initialize_directories</span></code>, if needed, overrides the values from the cfg files at runtime.</p></li>
+</ol>
+</div>
+</div>
 </div>
 
 

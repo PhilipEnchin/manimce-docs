@@ -17,6 +17,7 @@
     <title>Windows &#8212; manim  documentation</title>
     <link rel="stylesheet" href="../_static/guzzle.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -72,6 +73,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../reference.html">Reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../tutorials.html">Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributing</a></li>
 </ul>
 
     
@@ -135,7 +137,7 @@ file in step 2.</p></li>
 using python3.7, you should run <code class="docutils literal notranslate"><span class="pre">pip3.7</span> <span class="pre">install</span> <span class="pre">(cairo-file).whl</span></code>.</p></li>
 <li><p>Alternatively, running the command below installs pycairo.  This needs to be
 run in an elevated command prompt like Powershell.</p>
-<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span>(Invoke-WebRequest -Uri https://raw.githubusercontent.com/ManimCommunity/manim/master/scripts/pycairoinstall.py -UseBasicParsing).Content | py -3
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">(</span>Invoke-WebRequest -Uri https://raw.githubusercontent.com/ManimCommunity/manim/master/scripts/pycairoinstall.py -UseBasicParsing<span class="o">)</span>.Content <span class="p">|</span> py -3
 </pre></div>
 </div>
 </li>
@@ -180,7 +182,7 @@ environment variable and running <code class="docutils literal notranslate"><spa
 <p>2. Double click the file and it opens a command prompt. There might be an error
 dialog or two about <code class="docutils literal notranslate"><span class="pre">luatex.dll</span></code> during the installation <a class="reference external" href="https://db.yihui.org/images/install-tl-win-lua.png">(like this)</a>, but that does not seem to hurt, and click “OK”. The installation directory is <code class="docutils literal notranslate"><span class="pre">%APPDATA%/TinyTeX</span></code>, where APPDATA is an environment variable that typically points to the path <code class="docutils literal notranslate"><span class="pre">C:\Users\Your</span> <span class="pre">Name\AppData\Roaming</span></code></p>
 <p>3.Finally, close the terminal and open a new one and type the below commands.</p>
-<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">tlmgr</span> <span class="n">install</span> <span class="n">standalone</span> <span class="n">preview</span> <span class="n">doublestroke</span> <span class="n">ms</span> <span class="n">setspace</span> <span class="n">rsfs</span> <span class="n">relsize</span> <span class="n">ragged2e</span> <span class="n">fundus-calligra</span> <span class="n">microtype</span> <span class="n">wasysym</span> <span class="n">physics</span> <span class="n">dvisvgm</span> <span class="n">jknapltx</span> <span class="n">wasy</span> <span class="n">cm-super</span> <span class="n">babel-english</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tlmgr install standalone preview doublestroke ms setspace rsfs relsize ragged2e fundus-calligra microtype wasysym physics dvisvgm jknapltx wasy cm-super babel-english
 </pre></div>
 </div>
 <ol class="arabic simple" start="4">
